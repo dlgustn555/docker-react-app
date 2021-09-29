@@ -1,0 +1,11 @@
+FROM node
+
+WORKDIR /lee/apps/docker-react-app
+
+COPY package.json ./
+
+RUN npm install
+
+COPY ./ ./
+
+CMD npm run start
